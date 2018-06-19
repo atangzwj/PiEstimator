@@ -35,5 +35,10 @@ be found by following this path in the __Project Explorer:__
 named your block design differently from the default name, but will still
 contain the words "wrapper" and "platform."
 
-6. Continue following the [Getting Started with Vivado IP Integrator](https://reference.digilentinc.com/vivado/getting-started-with-ipi/start)
+6. Open the copy of the __main.c__ file within your project. Set the
+__ITERATIONS__ macro to the number of coordinate points that you want each
+instance of this IP core to generate. The more points that are generated, the
+more accurate the estimation of pi will be.
+
+7. Continue following the [Getting Started with Vivado IP Integrator](https://reference.digilentinc.com/vivado/getting-started-with-ipi/start)
 tutorial.

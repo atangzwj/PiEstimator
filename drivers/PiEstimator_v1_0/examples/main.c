@@ -13,6 +13,8 @@
 #define PIESTIMATOR_NUM_INSTANCES XPAR_PIESTIMATOR_NUM_INSTANCES
 #define PIESTIMATOR_0_BASEADDR    XPAR_PIESTIMATOR_0_S00_AXI_BASEADDR
 
+#define ITERATIONS 1000000
+
 #ifdef __MICROBLAZE__
 #define CLK_FREQ_HZ XPAR_CPU_M_AXI_DP_FREQ_HZ
 #else
@@ -36,7 +38,7 @@ int main() {
    u32 seedsY[PIESTIMATOR_NUM_INSTANCES];
    initSeeds(seedsX);
    initSeeds(seedsY);
-   u32 iterations = 1000000;
+   u32 iterations = ITERATIONS;
    u64 data[3];
 
    double pi = PiEstimator_runSimulation(baseAddrs, seedsX, seedsY,
